@@ -19,6 +19,7 @@
 <div class="ui grid posts">
   <app-article
     *ngFor="let foobar of articlesSort()"
-    [article]="foobar">
+    [article]="foobar"
+    (putRingOnIt)="ringWasPlaced($event)">
   </app-article>
 </div>

@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'app works!';
   articles: Article[];
 
-  constructor(){
+  constructor() {
     this.articles = [
       new Article('Angular 2', 'http://angular.io', 3),
       new Article('Fullstack', 'http://fullstack.io', 2),
@@ -25,8 +25,12 @@ export class AppComponent {
     return false;
   }
 
-  articlesSort() : Article[]{
-    return this.articles.sort((a: Article, b:Article) => b.votes- a.votes);
+  articlesSort(): Article[] {
+    return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
+  }
+
+  ringWasPlaced(message: string) {
+    console.log(`Put your hands up: ${message}`);
   }
 
 }
